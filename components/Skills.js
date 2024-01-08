@@ -16,7 +16,7 @@ import Seaborn from "../public/assets/skills/seaborn.png";
 import Sql from "../public/assets/skills/sql.png";
 import Tailwind from "../public/assets/skills/tailwind.png";
 import Express from "../public/assets/skills/express.png";
-
+import C from "../public/assets/skills/C.png";
 import Image from "next/image";
 const Skills = () => {
   return (
@@ -27,6 +27,7 @@ const Skills = () => {
         </p>
         <h2 className="py-4">What I Can Do</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          <SkillsItem title="C++" imageUrl={C} />
           <SkillsItem title="Html" imageUrl={Html} />
           <SkillsItem title="CSS" imageUrl={Css} />
           <SkillsItem title="Tailwind" imageUrl={Tailwind} />
