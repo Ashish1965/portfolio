@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>My new cool app</title>
+        <title>Ashish Narawariya Portfolio</title>
       </Head>
       <div>
         <Layout>
