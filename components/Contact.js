@@ -8,13 +8,17 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/router";
 const Contact = () => {
   const router = useRouter();
-  const [name, setName] = useState();
-  const [phone, setPhone] = useState();
-  const [email, setEmail] = useState();
-  const [subject, setSubject] = useState();
-  const [message, setMessage] = useState();
 
-  async function handleSubmit(event){
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  
+
+  async function handleSubmit(event) {
     event.preventDefault();
     const res = await fetch(`${baseUrl}/api/receive`, {
       method: "POST",
@@ -22,11 +26,11 @@ const Contact = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        Name : name,
-        Email : email,
-        Phone : phone,
-        Subject : subject,
-        Message : message,
+        Name: formData.name,
+        Email: formData.email,
+        Phone: formData.phone,
+        Subject: formData.subject,
+        Message: formData.message,
       }),
     });
     const res2 = await res.json();
@@ -34,7 +38,13 @@ const Contact = () => {
       toast.error(res2.error);
     } else {
       toast.success(res2.message);
-      router.reload();
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     }
   }
   
@@ -96,56 +106,69 @@ const Contact = () => {
           <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4'>
               <form onSubmit={handleSubmit}>
-                <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
+                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                  <div className="flex flex-col">
+                    <label className="uppercase text-sm py-2">Name</label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                     />
                   </div>
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>
+                  <div className="flex flex-col">
+                    <label className="uppercase text-sm py-2">
                       Phone Number
                     </label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      className="border-2 rounded-lg p-3 flex border-gray-300"
+                      type="text"
+                      value={formData.phone}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                     />
                   </div>
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Email</label>
+                <div className="flex flex-col py-2">
+                  <label className="uppercase text-sm py-2">Email</label>
                   <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    type='email'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                   />
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Subject</label>
+                <div className="flex flex-col py-2">
+                  <label className="uppercase text-sm py-2">Subject</label>
                   <input
-                    className='border-2 rounded-lg p-3 flex border-gray-300'
-                    type='text'
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
+                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    type="text"
+                    value={formData.subject}
+                    onChange={(e) =>
+                      setFormData({ ...formData, subject: e.target.value })
+                    }
                   />
                 </div>
-                <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Message</label>
+                <div className="flex flex-col py-2">
+                  <label className="uppercase text-sm py-2">Message</label>
                   <textarea
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    className="border-2 rounded-lg p-3 border-gray-300"
+                    rows="10"
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                   ></textarea>
                 </div>
-                <button type="submit" className='w-full p-4 text-gray-100 mt-4 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100'>
+                <button
+                  type="submit"
+                  className="w-full p-4 text-gray-100 mt-4 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100"
+                >
                   Send Message
                 </button>
               </form>
