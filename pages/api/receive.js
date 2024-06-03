@@ -19,6 +19,6 @@ export default async (req, res) => {
     // console.log(newUser);
     res.status(201).json({ message: "!Success" });
   } catch (err) {
-    res.status(200).json({ error: err });
+    res.status(200).json({ error: "Error! Please Send the message again."});
   }
 };
