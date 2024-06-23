@@ -143,6 +143,16 @@ const Navbar = () => {
                     Home
                   </li>
                 </Link>
+                <Link href="/#education">
+                  <li
+                    onClick={() => {
+                      setNav(false);
+                    }}
+                    className="py-4 text-sm"
+                  >
+                    Education
+                  </li>
+                </Link>
                 <Link href="/#about">
                   <li
                     onClick={() => {
@@ -184,7 +194,7 @@ const Navbar = () => {
                   </li>
                 </Link>
               </ul>
-              <div className="pt-24">
+              <div className="pt-4">
                 <p className="uppercase tracking-widest text-blue-500">
                   Let's Connect
                 </p>
