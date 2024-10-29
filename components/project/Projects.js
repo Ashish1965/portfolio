@@ -15,7 +15,7 @@ const Projects = () => {
             < ProjectItem imageUrl = "/assets/projects/Ecommerce.jfif" title = "Elegant" language = "Next Js" link = "/elegant"/>
             < ProjectItem imageUrl = "/assets/projects/Jnv.png" title = "School Admission Project" language = "PHP" link = "/school"/>
             < ProjectItem imageUrl = "/assets/projects/frontend.jfif" title = "Front-end Project" language = "Next Js" link = "/bookmark"/>
-            < ProjectItem imageUrl = "/assets/projects/Model.jfif" title = "Heart Disease Predictot" language = "Python" link = "/heart"/>
+            < ProjectItem imageUrl = "/assets/projects/score.webp" title = "Cricket Score Predictor" language = "Python" link = "/score"/>
             
             
           </div>
