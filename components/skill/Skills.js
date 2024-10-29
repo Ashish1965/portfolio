@@ -46,7 +46,7 @@ const Skills = () => {
           <SkillsItem title="Numpy" imageUrl={Numpy} />
           <SkillsItem title="Pandas" imageUrl={Pandas} />
           <SkillsItem title="Seaborn" imageUrl={Seaborn} />
-          <SkillsItem title="Flask" imageUrl={flask} />
+          <SkillsItem title="Flask" imageUrl={Flask} />
         </div>
       </div>
     </div>
