@@ -17,6 +17,7 @@ import Sql from "@/public/assets/skills/sql.png";
 import Tailwind from "@/public/assets/skills/tailwind.png";
 import Express from "@/public/assets/skills/express.png";
 import C from "@/public/assets/skills/C.png";
+import Flask from "@/public/assets/skills/flask.svg";
 
 
 const Skills = () => {
@@ -45,6 +46,7 @@ const Skills = () => {
           <SkillsItem title="Numpy" imageUrl={Numpy} />
           <SkillsItem title="Pandas" imageUrl={Pandas} />
           <SkillsItem title="Seaborn" imageUrl={Seaborn} />
+          <SkillsItem title="Flask" imageUrl={flask} />
         </div>
       </div>
     </div>
