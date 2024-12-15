@@ -46,16 +46,22 @@ const property = (props) => {
           <p className="text-gray-700 dark:text-gray-600">Project</p>
           <div className="flex items-center justify-between">
             <h2 className="text-gray-700 dark:text-gray-600">Overview</h2>
-            <div className="mb-4 mr-4">
+            {/* <div className="mb-4 mr-4">
+              <ThemeToggle />
+            </div> */}
+          </div>
+          <p className="text-gray-700 dark:text-gray-500">{description}</p>
+          <div className="flex items-center justify-between mt-4">
+            
+            <a href={demo}>
+              <button className="px-8 py-2  dark:shadow-gray-700">
+                Demo
+              </button>
+            </a>
+            <div className="mr-4">
               <ThemeToggle />
             </div>
           </div>
-          <p className="text-gray-700 dark:text-gray-500">{description}</p>
-          <a href={demo}>
-            <button className="px-8 py-2 mt-4 dark:shadow-gray-700">
-              Demo
-            </button>
-          </a>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl py-4">
           <div className="p-2">
@@ -74,6 +80,7 @@ const property = (props) => {
             </div>
           </div>
         </div>
+        
         <Link href="/#projects">
           <p className="underline cursor-pointer dark:shadow-gray-700 dark:text-blue-800">
             Back
