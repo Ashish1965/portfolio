@@ -76,7 +76,7 @@ const Contact = () => {
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
         </p>
-        <h2 className="py-4 dark:text-gray-500">Get In Touch</h2>
+        <h2 className="py-4 dark:text-gray-500 text-gray-700">Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4">
@@ -89,9 +89,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <h2 className="py-2 dark:text-gray-500">Ashish Narawariya</h2>
-                <p className="dark:text-gray-500">Full Stack Web Developer</p>
-                <p className="py-4 dark:text-gray-500">
+                <h2 className="py-2 dark:text-gray-500 text-gray-700">Ashish Narawariya</h2>
+                <p className="dark:text-gray-500 text-gray-700">Full Stack Web Developer</p>
+                <p className="py-4 dark:text-gray-500 text-gray-600">
                   Thank you for taking the time to explore my portfolio! If
                   you're passionate about technology, innovation, or have a
                   project in mind that needs a creative touch, I'd love to
@@ -100,7 +100,7 @@ const Contact = () => {
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8 dark:text-gray-500">
+                <p className="uppercase pt-8 dark:text-gray-500 text-gray-700">
                   Connect With Me
                 </p>
                 <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
