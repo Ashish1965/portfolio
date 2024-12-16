@@ -43,27 +43,28 @@ const Main = () => {
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <Link href="https://www.linkedin.com/in/ashish-narawariya-7536b6242/">
-              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300 ">
+              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect ">
                 <FaLinkedin className="dark:bg-gray-500" />
               </div>
             </Link>
             <Link href="https://github.com/Ashish1965/">
-              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                 <FaGithub className="dark:bg-gray-500" />
               </div>
             </Link>
 
             <Link href="https://www.instagram.com/ashishnarawariya/">
-              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                 <FaInstagram className="dark:bg-gray-500" />
               </div>
             </Link>
             <Link href="https://x.com/AshishNara33521/">
-              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                 <FaXTwitter className="dark:bg-gray-500" />
               </div>
             </Link>
           </div>
+          
         </div>
       </div>
     </div>
