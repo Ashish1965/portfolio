@@ -31,9 +31,9 @@ const property = (props) => {
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2 dark:text-gray-900">{name}</h2>
+          <h2 className="py-2 dark:text-gray-500">{name}</h2>
           {lang.map((lan) => (
-            <span className="font-bold dark:text-gray-900" key={lan}>
+            <span className="font-bold dark:text-gray-400" key={lan}>
               {" "}
               {lan}{" "}
             </span>
