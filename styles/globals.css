@@ -12,9 +12,14 @@ html {
   @apply transition-colors duration-700
 }
 
+.nav-transition {
+  transition: all 0.7s ease-in;
+}
+
 @layer base {
   body {
-    /* @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide transition-colors ease-in-out duration-300; */
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide transition-colors ease-in-out duration-700;
+    /* @apply transition-colors duration-700 */
     @apply dark:bg-gray-800;
   }
 
