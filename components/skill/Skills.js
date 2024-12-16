@@ -21,7 +21,7 @@ import C from "@/public/assets/skills/C.png";
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full p-2 mt-24 dark:bg-gray-800">
+    <div id="skills" className="w-full p-2 mt-24">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
