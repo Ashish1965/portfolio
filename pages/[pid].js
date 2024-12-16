@@ -20,7 +20,7 @@ const property = (props) => {
   // console.log(image);
 
   return (
-    <div className="w-full dark:bg-gray-800" key={_id}>
+    <div className="w-full h-screen dark:bg-gray-800" key={_id}>
       <div className="w-screen h-[50vh] relative">
         <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
         <Image
