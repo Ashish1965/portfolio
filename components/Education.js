@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <div id="education" className="w-full p-2 flex items-center mt-24">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
-        <div className="w-full h-auto my-8 md:m-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300 sm:mb-16">
+        <div className="w-full h-auto my-8 md:m-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl flex items-center justify-center p-4 hover-scale-effect sm:mb-16">
           <img
             src="/assets/education.jpg"
             className="rounded-xl w-full h-full"
