@@ -12,9 +12,25 @@ html {
   @apply transition-colors duration-700
 }
 
+
 .nav-transition {
   transition: all 0.7s ease-in;
 }
+.hover-scale-effect {
+  transition: transform 0.3s ease-in; /* 300ms duration with ease-in */
+}
+
+.hover-scale-effect:hover {
+  transform: scale(1.05); /* Scale by 5% on hover */
+}
+.hover-scale-effect-icon {
+  transition: transform 0.1s ease-in; /* 300ms duration with ease-in */
+}
+
+.hover-scale-effect-icon:hover {
+  transform: scale(1.1); /* Scale by 5% on hover */
+}
+
 
 @layer base {
   body {
