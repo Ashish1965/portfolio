@@ -3,7 +3,7 @@ import Image from "next/image";
 const SkillsItem = (props) => {
   const { title, imageUrl } = props;
   return (
-    <div className="p-6 shadow-xl rounded-xl  hover:scale-105 ease-in duration-300 h-auto">
+    <div className="p-6 shadow-xl rounded-xl  hover-scale-effect h-auto">
       <div className="grid grid-cols-2 gap-4 justify-center items-center">
         <div className="m-auto">
           <Image src={imageUrl} width="64px" height="64px" alt="/" />
