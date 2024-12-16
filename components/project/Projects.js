@@ -4,7 +4,7 @@ import ProjectItem from "./ProjectItem";
 const Projects = () => {
   return (
     <section id="projects">
-      <div className="w-full dark:bg-gray-800">
+      <div className="w-full">
         <div className="max-w-[1240px] mx-auto px-2 py-16">
           <p className="text-xl tracking-widest uppercase text-[#5651e5]">
             Projects
