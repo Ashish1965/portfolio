@@ -83,7 +83,7 @@ const Contact = () => {
             <div className="lg:p-4 h-full ">
               <div>
                 <img
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
+                  className="rounded-xl hover-scale-effect"
                   src="/assets/contact.avif"
                   alt="contact"
                 />
@@ -105,23 +105,23 @@ const Contact = () => {
                 </p>
                 <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
                   <Link href="https://www.linkedin.com/in/ashish-narawariya-7536b6242/">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300 ">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect ">
                       <FaLinkedin className="dark:bg-gray-500" />
                     </div>
                   </Link>
                   <Link href="https://github.com/Ashish1965/">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                       <FaGithub className="dark:bg-gray-500" />
                     </div>
                   </Link>
 
                   <Link href="https://www.instagram.com/ashishnarawariya/">
-                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                       <FaInstagram className="dark:bg-gray-500" />
                     </div>
                   </Link>
                   <Link href="https://x.com/AshishNara33521/">
-                    <div className="rounded-full shadow-lg shadow-gray-500 dark:shadow-gray-700 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-500 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
                       <FaXTwitter className="dark:bg-gray-500" />
                     </div>
                   </Link>
@@ -213,7 +213,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/#home">
-            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-4 cursor-pointer hover:scale-110 ease-in duration-1000">
+            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-4 cursor-pointer hover-scale-effect-icon">
               <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
             </div>
           </Link>
