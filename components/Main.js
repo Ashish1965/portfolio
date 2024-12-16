@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <div
       id="home"
-      className="w-full text-center dark:bg-gray-800 mt-40 lg:mt-12"
+      className="w-full text-center mt-40 lg:mt-12"
     >
       {/* <div className="absolute flex items-end justify-end mt-14 ml-5">
       <ThemeToggle />
