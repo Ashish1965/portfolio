@@ -20,7 +20,7 @@ const property = (props) => {
   // console.log(image);
 
   return (
-    <div className="w-full h-screen dark:bg-gray-800" key={_id}>
+    <div className="w-full dark:bg-gray-800" key={_id}>
       <div className="w-screen h-[50vh] relative">
         <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
         <Image
@@ -41,7 +41,7 @@ const property = (props) => {
         </div>
       </div>
 
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8 h-2/3">
         <div className="col-span-4">
           <p className="text-gray-700 dark:text-gray-600">Project</p>
           <div className="flex items-center justify-between">
@@ -81,7 +81,7 @@ const property = (props) => {
           </div>
         </div>
         
-        <Link href="/#projects">
+        <Link href="/#projects" className="pb-96">
           <p className="underline cursor-pointer dark:shadow-gray-700 dark:text-blue-800">
             Back
           </p>
