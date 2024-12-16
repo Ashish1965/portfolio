@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 const About = () => {
   return (
-    <div id="about" className="w-full p-2 flex items-center mt-24 dark:bg-gray-800">
+    <div id="about" className="w-full p-2 flex items-center mt-24">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">
