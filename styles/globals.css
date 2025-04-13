@@ -2,36 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html {
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
+*{
+  @apply transition-colors duration-700
+}
+
+
+.nav-transition {
+  transition: all 0.7s ease-in;
+}
+.hover-scale-effect {
+  transition: transform 0.3s ease-in; /* 300ms duration with ease-in */
+}
+
+.hover-scale-effect:hover {
+  transform: scale(1.05); /* Scale by 5% on hover */
+}
+.hover-scale-effect-icon {
+  transition: transform 0.1s ease-in; /* 300ms duration with ease-in */
+}
+
+.hover-scale-effect-icon:hover {
+  transform: scale(1.1); /* Scale by 5% on hover */
+}
+
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide transition-colors ease-in-out duration-700;
+    /* @apply transition-colors duration-700 */
+    @apply dark:bg-gray-800;
+    @apply overflow-x-hidden
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+    @apply font-bold;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway];
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl;
   }
   
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
   }
 }

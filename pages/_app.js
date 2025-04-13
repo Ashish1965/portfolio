@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import Layout from "@/components/Layout";
-
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,9 +10,11 @@ export default function App({ Component, pageProps }) {
         <title>Ashish Narawariya Portfolio</title>
       </Head>
       <div>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <ThemeProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
       </div>
     </>
   );

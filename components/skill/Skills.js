@@ -17,6 +17,7 @@ import Sql from "@/public/assets/skills/sql.png";
 import Tailwind from "@/public/assets/skills/tailwind.png";
 import Express from "@/public/assets/skills/express.png";
 import C from "@/public/assets/skills/C.png";
+import Flask from "@/public/assets/skills/Flask.png";
 
 
 const Skills = () => {
@@ -26,7 +27,7 @@ const Skills = () => {
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Skills
         </p>
-        <h2 className="py-4">What I Can Do</h2>
+        <h2 className="py-4 text-gray-700 dark:text-gray-600">What I Can Do</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <SkillsItem title="C++" imageUrl={C} />
           <SkillsItem title="Html" imageUrl={Html} />
@@ -45,6 +46,7 @@ const Skills = () => {
           <SkillsItem title="Numpy" imageUrl={Numpy} />
           <SkillsItem title="Pandas" imageUrl={Pandas} />
           <SkillsItem title="Seaborn" imageUrl={Seaborn} />
+          <SkillsItem title="Flask" imageUrl={Flask} />
         </div>
       </div>
     </div>

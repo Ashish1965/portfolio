@@ -6,14 +6,18 @@ import Projects from "@/components/project/Projects";
 import Contact from "@/components/Contact";
 import Education from "@/components/Education";
 import React from "react";
+import Experience from "@/components/Experience";
+
+
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-32 md:gap-12">
-      <Navbar />
+      
+    <div className="flex flex-col gap-32 md:gap-12 dark:bg-gray-800">
       <Main />
-      <Education />
       <About />
+      <Education />
+      <Experience/>
       <Skills />
       <Projects />
       <Contact />
