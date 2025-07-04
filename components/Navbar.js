@@ -37,9 +37,9 @@ const Navbar = () => {
         // console.log('light');
 
         setNavBg("#ecf0f3");
+        setLinkColor("#1f2937");
       }
       // setNavBg("#ecf0f3");
-      // setLinkColor("#1f2937");
     }
   }, [router]);
 
