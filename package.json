@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.6.5",
+    "lucide-react": "^0.540.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
     "next": "14.0.4",

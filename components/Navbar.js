@@ -14,10 +14,8 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
   const router = useRouter();
-  const {theme} = useTheme();
+  const { theme } = useTheme();
   // console.log(theme);
-
-  
 
   useEffect(() => {
     if (
@@ -30,10 +28,8 @@ const Navbar = () => {
       setNavBg("transparent");
       // console.log("router");
       setLinkColor("#ecf0f3");
-    }
-    
-    else {
-      if(theme === 'light'){
+    } else {
+      if (theme === "light") {
         // console.log('light');
 
         setNavBg("#ecf0f3");
@@ -70,15 +66,16 @@ const Navbar = () => {
       >
         <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 dark:bg-gray-900">
           <div>
-          <Link href="/">
-            <Image src="/assets/logo.png" alt="Logo" width="90" height="35" />
-          </Link>
-          
+            <Link href="/">
+              <Image src="/assets/logo.png" alt="Logo" width="90" height="35" />
+            </Link>
           </div>
           <div>
             <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
               <Link href="/#home">
-                <li className="ml-10 text-sm uppercase hover:border-h dark:text-gray-500">Home</li>
+                <li className="ml-10 text-sm uppercase hover:border-h dark:text-gray-500">
+                  Home
+                </li>
               </Link>
               <Link href="/#about">
                 <li className="ml-10 text-sm uppercase hover:border-h dark:text-gray-500">
@@ -95,7 +92,7 @@ const Navbar = () => {
                   Experience
                 </li>
               </Link>
-              
+
               <Link href="/#skills">
                 <li className="ml-10 text-sm uppercase hover:border-h dark:text-gray-500">
                   Skills
@@ -119,16 +116,14 @@ const Navbar = () => {
         </div>
         <div
           className={
-            nav
-              ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
-              : ""
+            nav ? "md:hidden fixed left-0 top-0 w-full h-full bg-black/70" : ""
           }
         >
           <div
             className={
               nav
-                ? "fixed left-0 top-0 w-[85%] md:w-[45%] h-screen bg-white p-10 nav-transition dark:bg-gray-900"
-                : "fixed left-[-100%] top-0 w-[75%] md:w-[45%] h-screen bg-white dark:bg-gray-900  p-10 nav-transition "
+                ? "fixed left-0 top-0 w-[85%] md:w-[45%] h-full bg-white p-10 nav-transition dark:bg-gray-900"
+                : "fixed left-[-100%] top-0 w-[75%] md:w-[45%] h-full bg-white dark:bg-gray-900  p-10 nav-transition "
             }
           >
             <div>
@@ -234,28 +229,28 @@ const Navbar = () => {
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                   <Link href="https://www.linkedin.com/in/ashish-narawariya-7536b6242/">
                     <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
-                      <FaLinkedin className="dark:bg-gray-500" />
+                      <FaLinkedin className="text-gray-700 dark:text-gray-200" />
                     </div>
                   </Link>
+
                   <Link href="https://github.com/Ashish1965/">
                     <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
-                      <FaGithub className="dark:bg-gray-500" />
+                      <FaGithub className="text-gray-700 dark:text-gray-200" />
                     </div>
                   </Link>
 
                   <Link href="https://www.instagram.com/ashishnarawariya/">
                     <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
-                      <FaInstagram className="dark:bg-gray-500" />
+                      <FaInstagram className="text-gray-700 dark:text-gray-200" />
                     </div>
                   </Link>
+
                   <Link href="https://x.com/AshishNara33521/">
                     <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
-                      <FaXTwitter className="dark:bg-gray-500" />
+                      <FaXTwitter className="text-gray-700 dark:text-gray-200" />
                     </div>
                   </Link>
                 </div>
-
-                
               </div>
             </div>
           </div>
