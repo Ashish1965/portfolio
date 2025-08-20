@@ -53,10 +53,12 @@ const Education = () => {
             </h6>
             <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">
               Enrolled in a B.Tech program specializing in Computer Science and
-              Design, integrating technical computing skills with innovative design
-              concepts.  
-              Maintaining a strong <b>CGPA of 8.3</b> at Madhav Institute of
-              Technology and Science, Gwalior.
+            Design, which integrates technical computing skills with innovative
+            design concepts. Maintaining a strong <b>CGPA of 8.3</b>, reflecting
+            consistent academic excellence and commitment to the field. Studying
+            at Madhav Institute of Technology and Science, a reputed institution
+            recognized for its high standards in engineering and technology
+            education.
             </p>
           </motion.div>
 
@@ -72,10 +74,15 @@ const Education = () => {
               🏫 AISSCE (Class XII) – 86.2%
             </h6>
             <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-              Studied at <b>Jawahar Navodaya Vidyalaya, Amarkantaka</b>, Madhya
-              Pradesh – a beacon of academic excellence.  
-              Achieved <b>86.2% in AISSCE (2019–20)</b>, reflecting strong academic
-              performance and dedication.
+              Jawahar Navodaya Vidyalaya, Amarkantaka, A Beacon of Academic
+            Excellence Nestled amidst the picturesque hills of Amarkantaka,
+            Madhya Pradesh, <b>Jawahar Navodaya Vidyalaya</b> stands as a testament to
+            the power of education in transforming lives. In the academic year
+            2019-20, Jawahar Navodaya Vidyalaya, Amarkantaka, set a new
+            benchmark by achieving an outstanding <b>AISSCE (Class XII) result of
+            86.2%</b>. This remarkable feat is a testament to the dedication of the
+            school's faculty, the commitment of its students, and the unwavering
+            support of the school administration.
             </p>
           </motion.div>
         </div>

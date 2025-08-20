@@ -27,6 +27,12 @@ const itemVariants = {
   },
 };
 
+const hoverEffect = {
+  scale: 1.05, // slight enlargement
+  y: -5,       // lift
+  boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+};
+
 const Projects = () => {
   return (
     <section id="projects">
@@ -47,42 +53,41 @@ const Projects = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            {/* Wrap each project in motion.div */}
-            <motion.div variants={itemVariants}>
-              <ProjectItem
-                imageUrl="/assets/projects/netflix.png"
-                title="Aflix"
-                language="Next Js"
-                link="/netflix"
-              />
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <ProjectItem
-                imageUrl="/assets/projects/Ecommerce.jfif"
-                title="Elegant"
-                language="Next Js"
-                link="/elegant"
-              />
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <ProjectItem
-                imageUrl="/assets/projects/frontend.jfif"
-                title="Front-end Project"
-                language="Next Js"
-                link="/bookmark"
-              />
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <ProjectItem
-                imageUrl="/assets/projects/score.webp"
-                title="Cricket Score Predictor"
-                language="Python"
-                link="/score"
-              />
-            </motion.div>
+            {[
+              {
+                imageUrl: "/assets/projects/netflix.png",
+                title: "Aflix",
+                language: "Next Js",
+                link: "/netflix",
+              },
+              {
+                imageUrl: "/assets/projects/Ecommerce.jfif",
+                title: "Elegant",
+                language: "Next Js",
+                link: "/elegant",
+              },
+              {
+                imageUrl: "/assets/projects/frontend.jfif",
+                title: "Front-end Project",
+                language: "Next Js",
+                link: "/bookmark",
+              },
+              {
+                imageUrl: "/assets/projects/score.webp",
+                title: "Cricket Score Predictor",
+                language: "Python",
+                link: "/score",
+              },
+            ].map((project, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={hoverEffect}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <ProjectItem {...project} />
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
