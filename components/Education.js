@@ -47,10 +47,10 @@ const Education = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h6 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <h6 className="text-lg font-semibold text-gray-700 dark:text-gray-500">
               🎓 B.Tech in Computer Science & Design
             </h6>
-            <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+            <p className="mt-2 text-gray-600 dark:text-gray-500 text-sm">
               Enrolled in a B.Tech program specializing in Computer Science and
               Design, integrating technical computing skills with innovative
               design concepts. Maintaining a strong CGPA of 8.3 at{" "}
@@ -66,10 +66,10 @@ const Education = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <h6 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <h6 className="text-lg font-semibold text-gray-700 dark:text-gray-500">
               🏫 AISSCE (Class XII) – 86.2%
             </h6>
-            <p className="mt-2 text-gray-600 dark:text-gray-400 text-sm">
+            <p className="mt-2 text-gray-600 dark:text-gray-500 text-sm">
               Studied at <b>Jawahar Navodaya
               Vidyalaya, Amarkantaka, Madhya Pradesh</b> – a beacon of academic
               excellence. Achieved 86.2% in AISSCE (2019–20), reflecting strong

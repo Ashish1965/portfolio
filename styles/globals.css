@@ -34,7 +34,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide transition-colors ease-in-out duration-700;
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide transition-colors ease-in-out duration-1000;
     /* @apply transition-colors duration-700 */
     @apply dark:bg-gray-800;
     @apply overflow-x-hidden

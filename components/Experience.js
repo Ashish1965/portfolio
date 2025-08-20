@@ -30,7 +30,7 @@ const Experience = () => {
         <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           Experience
         </p>
-        <h2 className="py-4 text-gray-700 dark:text-gray-300">
+        <h2 className="py-4 text-gray-700 dark:text-gray-600">
           Where I’ve Worked
         </h2>
 
@@ -52,13 +52,13 @@ const Experience = () => {
 
               {/* Card */}
               <div className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl  transition-transform duration-300">
-                <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-500">
                   {exp.company}
                 </h4>
-                <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-2">
+                <p className="text-sm italic text-gray-700 dark:text-gray-500 mb-2">
                   {exp.duration}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-gray-600 dark:text-gray-500">
                   {exp.description}
                 </p>
               </div>

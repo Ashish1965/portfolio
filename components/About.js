@@ -49,7 +49,7 @@ const About = () => {
           <motion.h2 className="py-4 text-gray-700 dark:text-gray-600" variants={itemVariants}>
             Who I Am
           </motion.h2>
-          <motion.p className="py-2 text-gray-700 dark:text-gray-500" variants={itemVariants}>
+          <motion.p className="py-2 text-gray-600 dark:text-gray-500" variants={itemVariants}>
             My journey into the world of web development began with a profound fascination for the intersection of design and code. Over the years, I've delved into the intricacies of both front-end and back-end development, finding joy in mastering languages and frameworks that power the web.
           </motion.p>
           <motion.p className="py-2 text-gray-600 dark:text-gray-500" variants={itemVariants}>
