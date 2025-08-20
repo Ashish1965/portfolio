@@ -7,11 +7,10 @@ import baseUrl from "@/helpers/baseUrl";
 import toast from "react-hot-toast";
 import { useRouter } from "next/router";
 import { useTheme } from "@/context/ThemeContext";
-import { motion } from "framer-motion";
-
 const Contact = () => {
   const router = useRouter();
   const { theme } = useTheme();
+  // console.log(theme);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -73,47 +72,25 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full">
-      <div className="max-w-[1240px] m-auto px-2 py-8 w-full">
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-xl tracking-widest uppercase text-[#5651e5]"
-        >
+      <div className="max-w-[1240px] m-auto px-2 py-8 w-full  ">
+        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="py-4 dark:text-gray-500 text-gray-700"
-        >
-          Get In Touch
-        </motion.h2>
-
+        </p>
+        <h2 className="py-4 dark:text-gray-500 text-gray-700">Get In Touch</h2>
         <div className="grid lg:grid-cols-5 gap-8">
-          {/* Left Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4"
-          >
-            <div className="lg:p-4 h-full">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-xl"
-                src="/assets/contact.avif"
-                alt="contact"
-              />
+          {/* left */}
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl p-4">
+            <div className="lg:p-4 h-full ">
               <div>
-                <h2 className="py-2 dark:text-gray-500 text-gray-700">
-                  Ashish Narawariya
-                </h2>
-                <p className="dark:text-gray-500 text-gray-700">
-                  Full Stack Web Developer
-                </p>
+                <img
+                  className="rounded-xl hover-scale-effect"
+                  src="/assets/contact.avif"
+                  alt="contact"
+                />
+              </div>
+              <div>
+                <h2 className="py-2 dark:text-gray-500 text-gray-700">Ashish Narawariya</h2>
+                <p className="dark:text-gray-500 text-gray-700">Full Stack Web Developer</p>
                 <p className="py-4 dark:text-gray-500 text-gray-600">
                   Thank you for taking the time to explore my portfolio! If
                   you're passionate about technology, innovation, or have a
@@ -127,65 +104,38 @@ const Contact = () => {
                   Connect With Me
                 </p>
                 <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-                  {[
-                    {
-                      href: "https://www.linkedin.com/in/ashish-narawariya-7536b6242/",
-                      icon: <FaLinkedin />,
-                    },
-                    {
-                      href: "https://github.com/Ashish1965/",
-                      icon: <FaGithub />,
-                    },
-                    {
-                      href: "https://www.instagram.com/ashishnarawariya/",
-                      icon: <FaInstagram />,
-                    },
-                    {
-                      href: "https://x.com/AshishNara33521/",
-                      icon: <FaXTwitter />,
-                    },
-                  ].map((social, i) => (
-                    <motion.div
-                      key={i}
-                      whileHover={{ scale: 1.2, rotate: 5 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-4 md:p-6 cursor-pointer mx-2"
-                    >
-                      <Link
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span className="text-gray-700 dark:text-gray-200 text-2xl">
-                          {social.icon}
-                        </span>
-                      </Link>
-                    </motion.div>
-                  ))}
+                  <Link href="https://www.linkedin.com/in/ashish-narawariya-7536b6242/">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect ">
+                      <FaLinkedin className="dark:bg-gray-500" />
+                    </div>
+                  </Link>
+                  <Link href="https://github.com/Ashish1965/">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
+                      <FaGithub className="dark:bg-gray-500" />
+                    </div>
+                  </Link>
+
+                  <Link href="https://www.instagram.com/ashishnarawariya/">
+                    <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
+                      <FaInstagram className="dark:bg-gray-500" />
+                    </div>
+                  </Link>
+                  <Link href="https://x.com/AshishNara33521/">
+                    <div className="rounded-full shadow-lg shadow-gray-500 dark:shadow-gray-700 p-6 cursor-pointer hover-scale-effect">
+                      <FaXTwitter className="dark:bg-gray-500" />
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right Card - Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl lg:p-4"
-          >
+          {/* right */}
+          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 dark:shadow-gray-700 rounded-xl lg:p-4">
             <div className="p-4">
-              <motion.form
-                onSubmit={handleSubmit}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
-                  <motion.div
-                    whileFocus={{ scale: 1.02 }}
-                    className="flex flex-col"
-                  >
+                  <div className="flex flex-col">
                     <label className="uppercase text-sm py-2 dark:text-gray-500">
                       Name
                     </label>
@@ -197,7 +147,7 @@ const Contact = () => {
                         setFormData({ ...formData, name: e.target.value })
                       }
                     />
-                  </motion.div>
+                  </div>
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2 dark:text-gray-500">
                       Phone Number
@@ -251,30 +201,23 @@ const Contact = () => {
                     }
                   ></textarea>
                 </div>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
                   type="submit"
-                  className="w-full p-4 text-gray-100 mt-4 bg-blue-500 hover:bg-blue-400 rounded-lg shadow-md"
+                  className="w-full p-4 text-gray-100 mt-4 bg-blue-500 hover:bg-blue-400 hover:scale-105 active:scale-100 dark:shadow-gray-700"
                 >
                   Send Message
-                </motion.button>
-              </motion.form>
+                </button>
+              </form>
             </div>
-          </motion.div>
+          </div>
         </div>
-
-        {/* Back to Top */}
-        <motion.div
-          whileHover={{ scale: 1.2, y: -5 }}
-          className="flex justify-center py-12"
-        >
+        <div className="flex justify-center py-12">
           <Link href="/#home">
-            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-4 cursor-pointer">
+            <div className="rounded-full shadow-lg shadow-gray-400 dark:shadow-gray-700 p-4 cursor-pointer hover-scale-effect-icon">
               <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
             </div>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

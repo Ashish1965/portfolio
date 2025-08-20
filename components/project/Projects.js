@@ -13,6 +13,20 @@ const containerVariants = {
   },
 };
 
+// Variants for each child (project card)
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 30 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 const Projects = () => {
   return (
     <section id="projects">
@@ -21,9 +35,11 @@ const Projects = () => {
           <p className="text-xl tracking-widest uppercase text-[#5651e5]">
             Projects
           </p>
-          <h2 className="py-4 text-gray-700 dark:text-gray-600">What I've Built</h2>
+          <h2 className="py-4 text-gray-700 dark:text-gray-600">
+            What I've Built
+          </h2>
 
-          {/* Wrap grid with motion.div */}
+          {/* Parent container with stagger animation */}
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -31,10 +47,42 @@ const Projects = () => {
             whileInView="show"
             viewport={{ once: true }}
           >
-            <ProjectItem imageUrl="/assets/projects/netflix.png" title="Aflix" language="Next Js" link="/netflix" />
-            <ProjectItem imageUrl="/assets/projects/Ecommerce.jfif" title="Elegant" language="Next Js" link="/elegant" />
-            <ProjectItem imageUrl="/assets/projects/frontend.jfif" title="Front-end Project" language="Next Js" link="/bookmark" />
-            <ProjectItem imageUrl="/assets/projects/score.webp" title="Cricket Score Predictor" language="Python" link="/score" />
+            {/* Wrap each project in motion.div */}
+            <motion.div variants={itemVariants}>
+              <ProjectItem
+                imageUrl="/assets/projects/netflix.png"
+                title="Aflix"
+                language="Next Js"
+                link="/netflix"
+              />
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <ProjectItem
+                imageUrl="/assets/projects/Ecommerce.jfif"
+                title="Elegant"
+                language="Next Js"
+                link="/elegant"
+              />
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <ProjectItem
+                imageUrl="/assets/projects/frontend.jfif"
+                title="Front-end Project"
+                language="Next Js"
+                link="/bookmark"
+              />
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <ProjectItem
+                imageUrl="/assets/projects/score.webp"
+                title="Cricket Score Predictor"
+                language="Python"
+                link="/score"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
