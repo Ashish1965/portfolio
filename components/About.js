@@ -3,19 +3,32 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const About = () => {
-  // Variants for fade-in animation
+  // Variants for container and staggered children
   const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: {},
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
     },
   };
 
   const imageHover = {
     scale: 1.05,
     boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+    transition: { type: "spring", stiffness: 300, damping: 20 },
+  };
+
+  const linkHover = {
+    scale: 1.05,
+    color: "#5651e5",
     transition: { type: "spring", stiffness: 300, damping: 20 },
   };
 
@@ -29,43 +42,30 @@ const About = () => {
         variants={containerVariants}
       >
         {/* Text Section */}
-        <motion.div variants={containerVariants} className="col-span-2">
-          <p className="uppercase text-xl tracking-widest text-[#5651e5]">
+        <motion.div className="col-span-2" variants={containerVariants}>
+          <motion.p className="uppercase text-xl tracking-widest text-[#5651e5]" variants={itemVariants}>
             About
-          </p>
-          <h2 className="py-4 text-gray-700 dark:text-gray-600">Who I Am</h2>
-          <p className="py-2 text-gray-700 dark:text-gray-500">
-            My journey into the world of web development began with a profound
-            fascination for the intersection of design and code. Over the years,
-            I've delved into the intricacies of both front-end and back-end
-            development, finding joy in mastering languages and frameworks that
-            power the web.
-          </p>
-          <p className="py-2 text-gray-600 dark:text-gray-500">
-            On the front-end, I'm well-versed in HTML, CSS, Tailwind CSS, and
-            JavaScript, utilizing modern frameworks like React and Next.js to
-            create intuitive, responsive, and visually appealing interfaces. I'm
-            passionate about user-centric design, ensuring seamless interactions
-            and accessibility across devices. On the back-end, I thrive in
-            architecting robust server-side solutions, working extensively with
-            Node.js, Express, Next.js, and databases such as MongoDB and MySQL to
-            build scalable and efficient applications.
-          </p>
-          <p className="py-2 text-gray-600 dark:text-gray-500">
-            I see every project as an opportunity to innovate and solve
-            real-world challenges. From optimizing performance and implementing
-            secure authentication systems to integrating APIs and exploring
-            emerging technologies, I love diving deep into technical intricacies
-            to deliver impactful solutions. I'm not just a developer; I'm a
-            collaborator eager to work with like-minded individuals and
-            businesses. Whether it's transforming ideas into reality, contributing
-            to a team project, or taking on new challenges – I'm always excited
-            to explore opportunities and make a difference through technology.
-          </p>
+          </motion.p>
+          <motion.h2 className="py-4 text-gray-700 dark:text-gray-600" variants={itemVariants}>
+            Who I Am
+          </motion.h2>
+          <motion.p className="py-2 text-gray-700 dark:text-gray-500" variants={itemVariants}>
+            My journey into the world of web development began with a profound fascination for the intersection of design and code. Over the years, I've delved into the intricacies of both front-end and back-end development, finding joy in mastering languages and frameworks that power the web.
+          </motion.p>
+          <motion.p className="py-2 text-gray-600 dark:text-gray-500" variants={itemVariants}>
+            On the front-end, I'm well-versed in HTML, CSS, Tailwind CSS, and JavaScript, utilizing modern frameworks like React and Next.js to create intuitive, responsive, and visually appealing interfaces. I'm passionate about user-centric design, ensuring seamless interactions and accessibility across devices. On the back-end, I thrive in architecting robust server-side solutions, working extensively with Node.js, Express, Next.js, and databases such as MongoDB and MySQL to build scalable and efficient applications.
+          </motion.p>
+          <motion.p className="py-2 text-gray-600 dark:text-gray-500" variants={itemVariants}>
+            I see every project as an opportunity to innovate and solve real-world challenges. From optimizing performance and implementing secure authentication systems to integrating APIs and exploring emerging technologies, I love diving deep into technical intricacies to deliver impactful solutions. I'm not just a developer; I'm a collaborator eager to work with like-minded individuals and businesses.
+          </motion.p>
           <Link href="/#projects">
-            <p className="py-2 text-gray-600 underline cursor-pointer dark:text-blue-500">
+            <motion.p 
+              className="py-2 text-gray-600 underline cursor-pointer dark:text-blue-500"
+              whileHover={linkHover}
+              variants={itemVariants}
+            >
               Check out some of my latest projects.
-            </p>
+            </motion.p>
           </Link>
         </motion.div>
 
