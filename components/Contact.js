@@ -143,7 +143,7 @@ const Contact = () => {
                   <motion.div className="flex flex-col">
                     <label className="uppercase text-sm py-2 dark:text-gray-500">Name</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500"
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -152,7 +152,7 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2 dark:text-gray-500">Phone Number</label>
                     <input
-                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+                      className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500"
                       type="text"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -163,7 +163,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2 dark:text-gray-500">Email</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500"
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -173,7 +173,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2 dark:text-gray-500">Subject</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+                    className="border-2 rounded-lg p-3 flex border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500"
                     type="text"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -183,7 +183,7 @@ const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2 dark:text-gray-500">Message</label>
                   <textarea
-                    className="border-2 rounded-lg p-3 border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+                    className="border-2 rounded-lg p-3 border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500"
                     rows="10"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}

@@ -1,2 +1,2 @@
-const baseUrl = 'https://ashish-narawariya.vercel.app';
+const baseUrl = 'http://localhost:3000';
 export default baseUrl;
