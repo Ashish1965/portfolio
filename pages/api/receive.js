@@ -16,17 +16,17 @@ export default async (req, res) => {
       return res.status(422).json({ error: "Please provide a valid name" });
     }
 
-    // 3. Email validation
+    // 3. Phone validation (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(Phone)) {
+      return res.status(422).json({ error: "Please provide a valid phone number" });
+    }
+    // 4. Email validation
     const emailRegex = /^[^\s@]+@[^\s@]{2,}\.[^\s@]{2,}$/;
     if (!emailRegex.test(Email)) {
       return res.status(422).json({ error: "Please provide a valid email" });
     }
 
-    // 4. Phone validation (10 digits)
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(Phone)) {
-      return res.status(422).json({ error: "Please provide a valid phone number" });
-    }
 
     // 5. Save to DB if valid
     const newUser = await new Receiver({
